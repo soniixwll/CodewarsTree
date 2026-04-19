@@ -1,4 +1,4 @@
-"""hbfuisrhosf"""
+"""Module traversal tree"""
 class Node:
     def __init__(self, data=None, left=None, right=None):
         if data == None:
@@ -11,6 +11,7 @@ class Node:
 
 # Pre-order traversal
 def pre_order(node: Node):
+    """Traversal in pre-order"""
 
     if node is None:
         return []
@@ -21,6 +22,7 @@ def pre_order(node: Node):
 
 # In-order traversal
 def in_order(node):
+    """Traversal in in-order"""
 
     if node is None:
         return []
@@ -31,6 +33,7 @@ def in_order(node):
 
 # Post-order traversal
 def post_order(node):
+    """Traversal in post-order"""
 
     if node is None:
         return []
