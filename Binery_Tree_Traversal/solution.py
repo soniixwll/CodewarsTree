@@ -17,17 +17,6 @@ def pre_order(node: Node):
     else:
         answer_list = [node.data]
 
-        # if node.left:
-        # answer_list.append(node.left.data)
-        # answer_list += pre_order(node.left)
-
-    # if node.right:
-        # answer_list.append(node.right.data)
-        # answer_list += pre_order(node.right)
-
-        # if node is None:
-        #     answer_list.append('leaf')
-
     return answer_list + pre_order(node.left) + pre_order(node.right)
 
 # In-order traversal
@@ -38,20 +27,7 @@ def in_order(node):
     else:
         answer_list = [node.data]
 
-        if node.left:
-            answer_list.append(node.left.data)
-            pre_order(node.left)
-
-        answer_list.append(node.data)
-
-        if node.right:
-            answer_list.append(node.right.data)
-            pre_order(node.right)
-
-        if node is None:
-            answer_list.append('leaf')
-
-    return answer_list
+    return in_order(node.left) + answer_list + in_order(node.right)
 
 # Post-order traversal
 def post_order(node):
@@ -61,17 +37,4 @@ def post_order(node):
     else:
         answer_list = [node.data]
 
-        if node.left:
-            answer_list.append(node.left.data)
-            pre_order(node.left)
-
-        if node.right:
-            answer_list.append(node.right.data)
-            pre_order(node.right)
-
-        if node is None:
-            answer_list.append('leaf')
-
-        answer_list.append(node.data)
-
-    return answer_list
+    return post_order(node.left) + post_order(node.right) + answer_list
