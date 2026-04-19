@@ -1,15 +1,16 @@
+"""Module searching tree by levels"""
 from collections import deque
 
 class Node:
+    """Class Node"""
     def __init__(self, L, R, n):
         self.left = L
         self.right = R
         self.value = n
 
-# def has_children(node):
 
 def tree_by_levels(node):
-
+    """Class that returns list with nodes sorted by levels"""
     if node is None:
         return []
 
