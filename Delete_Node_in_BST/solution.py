@@ -1,14 +1,18 @@
 # Definition for a binary tree node.
+"""Module taht deletes treenode"""
 from typing import Optional
 class TreeNode:
+    """Class Treenode"""
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
 class Solution:
+    """Class that gives us a solution"""
 
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        """Function that deletes a node"""
         if root is None:
             return None
 
